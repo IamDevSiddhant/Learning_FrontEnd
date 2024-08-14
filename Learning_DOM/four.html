@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom With Siddhant</title>
+  </head>
+  <body style="background-color: #121212; color: #fff">
+    <ul class="lang">
+      <li>java</li>
+    </ul>
+  </body>
+
+  <script>
+    function lang(lang) {
+      //lets create list element
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(`${lang}`));
+      document.querySelector(".lang").appendChild(li);
+    }
+    lang("javascript");
+    lang("typescript");
+    lang("python");
+
+    //edit the list
+    const existingElement = document.querySelector("li:nth-child(4)");
+    const editElement = document.createElement("li");
+    editElement.textContent = "golang";
+    existingElement.replaceWith(editElement);
+
+    //remove
+    const lastlang = document.querySelector("li:last-child");
+    lastlang.remove();
+  </script>
+</html>
