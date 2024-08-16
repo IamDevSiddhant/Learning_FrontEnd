@@ -59,6 +59,7 @@ function checkGuess(guess) {
 //display guess
 function displayGuess(guess) {
   userInput.value = "";
+  guessSlot.innerHTML = `${guess}`;
   remainingAttempts.innerHTML = `${5 - numGuess}`;
   numGuess++;
 }
@@ -86,7 +87,7 @@ function newGame() {
   newGameButton.addEventListener("click", function (e) {
     randomNumber = parseInt(Math.random() * 100 + 1);
     console.log(randomNumber);
-    prevGuess = [];
+    guessSlot.innerHTML = "";
     numGuess = 1;
     //guessSlot.innerHTML = "";
     remainingAttempts.innerHTML = `5`;
