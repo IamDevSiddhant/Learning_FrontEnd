@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Learning JS</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    
+</body>
+
+<script>
+
+    let intervalId;
+    
+
+    const startText = function(){
+        intervalId=setInterval(()=>console.log("siddhant"),1000);
+    }
+    const startTextSid=document.querySelector('#start').addEventListener('click',startText);
+
+
+    const clearInt = function() {
+        clearInterval(intervalId);
+    }
+
+    document.querySelector('#stop').addEventListener('click',clearInt)
+</script>
+</html>
