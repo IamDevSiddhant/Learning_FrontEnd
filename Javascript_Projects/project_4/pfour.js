@@ -31,7 +31,7 @@ function validateGuess(guess) {
   } else if (guess < 1 && guess > 100) {
     alert("input range is 1 to 100");
   } else {
-    if (numGuess === 5) {
+    if (numGuess === 5 && guess !== randomNumber) {
       displayGuess(guess);
       displayMessage(
         `please start over, you have used all the attempts, random number is ${randomNumber}`
